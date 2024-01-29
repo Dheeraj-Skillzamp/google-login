@@ -22,6 +22,7 @@ export default function Login() {
       console.log("Data sent to the backend successfully", response);
     })
     .catch(error => {
+      alert("User Already Exists")
       console.error("Error sending data to the backend", error);
     });
   }
@@ -37,21 +38,12 @@ export default function Login() {
         buttonText="SignUp"
         onSuccess={onSuccess}
         onFailure={onFailure}
-        cookiePolicy={'single_host_origin'}
-        isSignedIn={true}
+        // cookiePolicy={'single_host_origin'}
+        // isSignedIn={true}
       />
     </div>
   );
 }
-
-
-
-
-
-
-
-
-
 
 
 
